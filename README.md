@@ -4,6 +4,7 @@
 
 Projet réalisé lors de la première année de Master à l'Université de Grenoble par Antoine ARCANGELONI et Claire TEOULLE, M1 WIC.
 Inspiré de [TODOMVC](http://todomvc.com/) avec Angular 2.
+__Objectif__ : Pouvoir ajouter des fichiers multimédias.
 
 ## Installation
 
