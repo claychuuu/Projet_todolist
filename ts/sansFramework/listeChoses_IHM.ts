@@ -30,7 +30,7 @@ export class ListeChosesIHM extends ComponentIHM {
         // HTML -> NF
         this.form.addEventListener("submit", evt => {
             evt.preventDefault();
-            this.NF.Ajouter( this.input.value );
+            //this.NF.Ajouter( this.input.value );
             this.input.value = "";
         });
 

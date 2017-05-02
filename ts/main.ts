@@ -14,7 +14,6 @@ let PromesseDocumentPret = new Promise( (resolve) => {
     }
 });
 
-
 @Component({
     selector		: "demo-m2m",
     template		: `<liste-choses titre="LA Liste"></liste-choses>`

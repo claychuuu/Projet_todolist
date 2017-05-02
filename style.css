@@ -27,7 +27,7 @@ body {
     background: #f5f5f5;
     color: #4d4d4d;
     min-width: 230px;
-    max-width: 550px;
+    max-width: 800px;
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -197,9 +197,8 @@ label[for='toggle-all'] {
 }
 
 .todo-list li label {
-    white-space: pre-line;
     word-break: break-all;
-    padding: 15px 60px 15px 15px;
+    padding: 10px 10px 10px 15px;
     margin-left: 45px;
     display: block;
     line-height: 1.2;
@@ -217,12 +216,10 @@ label[for='toggle-all'] {
     top: 0;
     right: 10px;
     bottom: 0;
-    width: 40px;
-    height: 40px;
+    vertical-align: center;
     margin: auto 0;
     font-size: 30px;
     color: #cc9a9a;
-    margin-bottom: 11px;
     transition: color 0.2s ease-out;
 }
 
@@ -246,9 +243,9 @@ label[for='toggle-all'] {
     margin-bottom: -1px;
 }
 
-.footer {
+.footer, .add {
     color: #777;
-    padding: 10px 15px;
+    padding: 20px 15px;
     height: 20px;
     text-align: center;
     border-top: 1px solid #e6e6e6;
@@ -341,10 +338,27 @@ html .clear-completed:active {
     font-weight: 400;
 }
 
-.info a:hover {
+a:hover {
     text-decoration: underline;
 }
 
+.multi, .choice, .color {
+    text-align: center;
+}
+
+#reset {
+    border: solid black 1px;
+}
+
+.grey {color: grey;}
+.purple {color: purple;}
+.blue {color: blue;}
+.green {color: green;}
+.yellow {color: yellow;}
+.orange {color: orange;}
+.pink {color: pink;}
+.red {color: red;}
+.maroon {color: maroon;}
 
 /*
 	Hack to remove background from Mobile Safari.

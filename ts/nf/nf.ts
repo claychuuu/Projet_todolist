@@ -32,20 +32,38 @@ class NF {
 
 export type EventChose = {
 	fait?	: boolean,
-	texte?	: string
+	texte?	: string,
+	addType?: string,
+	choice? : string,
+	path?	: string,
+	url?	: string,
+	color?  : string
 };
 export type NF_Chose_CallBack = (nf: Chose, eventName: string, value: EventChose) => void;
 export class Chose extends NF {
 	readonly liste		: ListeChoses;
 	readonly date 		: Date;
 	texte				: string;
+	addType				: string;
+	choice				: string;
+	path				: string;
+	url					: string;
+	color				: string;
 	fait 				: boolean;
-	constructor	(texte: string, liste: ListeChoses, fait: boolean = false, date: Date = null) {
+
+	constructor	(texte: string, addType: string, choice: string, path: string, url: string, color: string, liste: ListeChoses,
+		fait: boolean = false, date: Date = null, ) {
 		super();
 		this.texte  = texte;
+		this.addType= addType;
+		this.choice = choice;
+		this.path	= path;
+		this.url 	= url;
+		this.color  = color;
 		this.date	= date || new Date( Date.now() );
 		this.fait	= fait || false;
 		this.liste	= liste;
+		if(this.choice === "url") this.path = url;
 	}
 	dispose		() {
 		this.liste.Retirer(this);
@@ -76,8 +94,9 @@ export class ListeChoses extends NF {
 		super();
 		this.choses = [];
 	}
-	Ajouter		(texte: string, fait: boolean = false, date: Date = null) : this {
-		let chose = new Chose(texte, this, fait, date);
+	Ajouter		(texte: string, addType: string, choice: string, path: string, url: string, color: string,
+		fait: boolean = false, date: Date = null) : this {
+		let chose = new Chose(texte, addType, choice, path, url, color, this, fait, date);
 		this.choses.push( chose );
 		this.emit("update", {append: chose});
 		return this;
